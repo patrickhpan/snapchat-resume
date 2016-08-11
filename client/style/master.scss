@@ -33,10 +33,7 @@ div#Wrapper {
         background-size: cover;
 
         > div {
-            padding-top: $phone-top-padding;
-            padding-left: $phone-left-padding;
-            padding-right: $phone-right-padding;
-            padding-bottom: $phone-bottom-padding;
+            @include inphone();
         }
     }
 
@@ -149,13 +146,18 @@ div#Wrapper {
             }
 
             div.Story {
-                @include flex($flex-direction: row);
+                // @include flex($flex-direction: row);
                 width: 100%;
                 height: $story-height;
 
                 cursor: pointer;
 
-                img {
+                div.story-info-container {
+                    @include hundop;
+                    @include flex($flex-direction: row);
+                }
+
+                img.thumbnail {
                     border-radius: 50%;
                     height: $story-thumb-height;
                     width: $story-thumb-height;
@@ -164,7 +166,7 @@ div#Wrapper {
 
                 div.story-info {
                     @include flex($flex-direction: column, $align-items: flex-start);
-                    flex: 1; 
+                    flex: 1;  
 
                     h3 {
                         font-family: $sans2;
@@ -208,5 +210,18 @@ div#Wrapper {
                 }
             }
         }
+    }
+}
+
+div#Player {
+    position: absolute;
+    @include nosides;
+    @include hundop;
+    @include inphone;
+    
+    img {
+        @include hundop;
+        @include nosides;
+        // background-color: green;
     }
 }

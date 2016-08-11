@@ -8,6 +8,13 @@ $phone-right-padding: 12.15%;
 $phone-bottom-padding: 12.4% * $phone-ratio;
 $breakpoint: 480px;
 
+@mixin inphone() {
+    padding-top: $phone-top-padding;
+    padding-left: $phone-left-padding;
+    padding-right: $phone-right-padding;
+    padding-bottom: $phone-bottom-padding;
+}
+
 @mixin nosides() {
     top: 0;
     left: 0;
@@ -22,7 +29,7 @@ $breakpoint: 480px;
 
 @mixin flex($flex-direction: column, $align-items: center, $justify-content: center) {
     display: flex;
-    flex-direction: $flex-direction;
+    flex-direction: $flex-direction; 
     align-items: $align-items;
     justify-content: $justify-content;
 }
