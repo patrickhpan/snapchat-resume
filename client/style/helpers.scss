@@ -1,0 +1,116 @@
+// Layout
+
+$phone-ratio: 572 / 310;
+$phone-height: 90vh;
+$phone-top-padding: 14.56% * $phone-ratio;
+$phone-left-padding: 12.5%;
+$phone-right-padding: 12.15%;
+$phone-bottom-padding: 12.4% * $phone-ratio;
+$breakpoint: 480px;
+
+@mixin nosides() {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@mixin hundop() {
+    width: 100%!important;
+    height: 100%!important;
+}
+
+@mixin flex($flex-direction: column, $align-items: center, $justify-content: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@media screen and (max-width: $breakpoint) {
+    div#Wrapper {
+        position: fixed;
+        @include nosides();
+        @include hundop();
+        
+        margin: 0!important;
+
+        background: none!important;
+
+        font-size: 1.5vh!important;
+
+        > div {
+            padding: 0!important;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+// Colors 
+
+$yellow: #fffc00;
+$purple: #9b55a0;
+$black: #000000;
+$white: #ffffff;  
+
+// Fonts and aesthetics
+
+$sans1: 'Lato',
+    'Helvetica Neue',
+    'Helvetica', 
+    'Arial',
+    sans-serif;
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/MuseoSans_500-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$sans2: 'Museo Sans',
+    'Helvetica Neue',
+    'Helvetica', 
+    'Arial',
+    sans-serif;
+
+
+@mixin no-select() {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */      
+}
+
+// Universal style
+
+* {
+    box-sizing: border-box;
+    @include no-select();
+    font-family: $sans1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+input, button {
+    outline: none;
+}
+
+#Wrapper:not(.expanded) {
+    font-size: 1vh;
+}

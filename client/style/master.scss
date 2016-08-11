@@ -1,0 +1,212 @@
+@import './helpers.scss';
+@import './variables.scss';
+
+body {
+    margin: 0;
+    background-color: $yellow;
+    font-family: $sans1;
+}
+
+div#Wrapper {
+    // Wrapper.expanded fills screen
+    // Otherwise, appears in "phone view"
+
+    &.expanded {
+        @include nosides();
+        position: fixed;
+
+        width: 98%;
+        height: 98%;
+
+        margin: auto;
+    }
+    &:not(.expanded) {
+        @include nosides();
+        position: fixed;
+        
+        margin: auto;
+
+        width: $phone-height / $phone-ratio;
+        height: $phone-height;
+
+        background-image: url(../img/phone.svg);
+        background-size: cover;
+
+        > div {
+            padding-top: $phone-top-padding;
+            padding-left: $phone-left-padding;
+            padding-right: $phone-right-padding;
+            padding-bottom: $phone-bottom-padding;
+        }
+    }
+
+    div#Landing,
+    div#StoryList {
+        @include nosides();
+        @include hundop();
+        position: absolute; 
+
+        @include flex();
+    }
+
+    div#Landing {
+        div#landing-group {
+            @include flex($justify-content: flex-end);
+            flex: 1;
+            
+            img {
+                width: $landing-ghost-width;
+            }
+
+            h1 {
+                margin-top: $landing-header-margin-top;
+
+                // text-transform: lowercase;
+                font-size: $landing-header-size;    
+            }
+        }
+
+        div#landing-enter {
+            @include flex();
+
+            flex: 1;
+
+            button {
+                padding: $landing-button-padding;
+
+                border-radius: $landing-button-corners;
+                border: none;
+
+                background-color: $landing-button-bg;
+                color: $white;
+
+                text-transform: lowercase; 
+                font-size: $landing-button-size;
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    div#StoryList {
+        @include flex($justify-content: flex-start);
+
+        background-color: $white;
+        background-clip: content-box;
+
+         div#StoryHeader {
+                @include flex($flex-direction: row);
+
+                width: 100%;
+                height: $story-header-height;
+
+                background-color: $white;
+                color: $purple;
+
+                h2 {
+                    font-weight: $story-header-weight;
+                    font-size: $story-header-size;
+                }
+            }
+
+        div#story-section-container {
+            @include flex($justify-content: flex-start);
+            width: 100%;
+            flex: 1;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            flex-wrap: nowrap;
+
+            > div {
+                flex-shrink: 0;
+                width: 100%;
+            }
+        }
+
+        div.StorySection {
+            @include flex($justify-content: space-between);
+
+            div.StorySectionHeader {
+                @include flex($flex-direction: row);
+                width: 100%;
+
+                div.border {
+                    flex: 1;
+                    border-top: $story-section-border;
+                }
+
+                h3 {
+                    margin-left: $story-section-header-margin;
+                    margin-right: $story-section-header-margin;
+                    
+                    color: $purple;
+
+                    font-weight: $story-section-header-weight;
+                    font-size: $story-section-header-size;
+                    letter-spacing: $story-section-header-spacing;
+                    text-transform: uppercase;
+                }
+            }
+
+            div.Story {
+                @include flex($flex-direction: row);
+                width: 100%;
+                height: $story-height;
+
+                cursor: pointer;
+
+                img {
+                    border-radius: 50%;
+                    height: $story-thumb-height;
+                    width: $story-thumb-height;
+                    margin: $story-thumb-margin;
+                }
+
+                div.story-info {
+                    @include flex($flex-direction: column, $align-items: flex-start);
+                    flex: 1; 
+
+                    h3 {
+                        font-family: $sans2;
+                        font-weight: $story-info-title-weight;
+                        font-size: $story-info-title-size;
+                        letter-spacing: $story-info-spacing;
+                    }
+                    h4 {
+                        font-family: $sans2;
+                        font-weight: $story-info-date-weight;
+                        color: $story-info-date-color;
+                    }
+                }
+            }
+        }
+
+        div.FeaturedStorySection {
+            @include flex($align-items: flex-start);
+            overflow-x: scroll;
+            margin-bottom: $featured-story-section-margin-bottom;
+            
+            div.featured-story-section-container {
+                @include flex($flex-direction: row, $justify-content: flex-start);
+
+                div.FeaturedStory {
+                    width: $featured-story-width;
+                    height: $featured-story-height;
+
+                    margin: $featured-story-margin;
+
+                    cursor: pointer;
+
+                    &:not(:last-of-type) {
+                        margin-right: 0;
+                    }
+
+                    img {
+                        @include hundop();
+                        border-radius: $featured-story-radius;
+                    }        
+                }
+            }
+        }
+    }
+}

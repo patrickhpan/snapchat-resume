@@ -1,0 +1,80 @@
+Various components:
+
+Wrapper (desktop only)
+
+Landing page
+	Name, logo
+	Link to main page
+
+Main page
+	Story sections
+		Story links
+	Featured stories
+
+Stories
+	Scenes
+		Image displayer
+		Post info
+		Timer
+		
+-----
+
+Wrapper 
+	Dimensions of an iPhone 6, centered
+	Image or css border (with psuedo :before?)
+
+Landing page
+	Name and logo are flex-centered
+
+Main page (mobile)
+	Story section
+		Header: 1px height span with border, then text, then another span
+	Story
+		Image preview, text	
+	Featured stories
+		Div with image background, text bottom-aligned
+
+Stories
+	Absolute, 100% size
+	Scenes
+		Image / video fill
+		Aligned top div
+			Left: text
+			Right: circular timer
+
+Circular timer:
+	Accomplishable with css? 
+	https://codepen.io/AtomicNoggin/pen/fEish
+
+-----
+
+React component hierarchy 
+
+body
+	App
+		Wrapper
+			Landing
+				div#logo-container
+					img
+				div#name
+				div#enter	
+			StoryList
+				StorySection
+					StoryHeader
+						span.bar
+						span.title
+						span.bar
+					Story...
+						img.story-preview	
+						div.story-info
+							span.story-title
+							span.story-date
+				FeaturedStorySection
+					FeaturedStory
+						div.story-info	
+			StoryPlayer
+				div.story-container
+				div.story-info
+					span.story-title
+					span.story-date
+				div.story-timer

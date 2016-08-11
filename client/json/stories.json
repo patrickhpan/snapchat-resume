@@ -1,0 +1,86 @@
+[
+    {
+        "title": "Education",
+        "stories": [{
+            "title": "Harvard College",
+            "date": "2014 - Present",
+            "content": [
+                "01.jpg"
+            ]
+        }, {
+            "title": "New England Conservatory",
+            "date": "2014 - Present",
+            "content": [
+                "01.jpg"
+            ]
+        }, {
+            "title": "Clear Lake High School",
+            "date": "2011   - 2014",
+            "content": [
+                "01.jpg"
+            ]
+        }]
+    },
+    {
+        "title": "Experience",
+        "stories": [{
+            "title": "Gifs.com",
+            "date": "2014 - Present",
+            "content": [
+                "01.jpg"
+            ]
+        }, {
+            "title": "Skindeep",
+            "date": "February 2016",
+            "content": [
+                "01.jpg"
+            ]
+        }, {
+            "title": "Microsoft",
+            "date": "Summer 2016",
+            "content": [
+                "01.jpg"
+            ]
+        }, {
+            "title": "CoxLab",
+            "date": "January 2016 - Present",
+            "content": [
+                "01.jpg"
+            ]
+        }, {
+            "title": "CS50 Teaching Fellow",
+            "date": "Fall 2015",
+            "content": [
+                "01.jpg"
+            ]
+        }]
+    },
+    {
+        "title": "Skills",
+        "stories": [{
+            "title": "Front-End Web Development",
+            "date": "Javascript ES6, React, HTML5, SCSS...",
+            "content": [
+                "01.jpg"
+            ]
+        }, {
+            "title": "Back-End Web Development",
+            "date": "node.js, php, SQL, webpack, elasticsearch...",
+            "content": [
+                "01.jpg" 
+            ]
+        }, {
+            "title": "Systems",
+            "date": "February 2016",
+            "content": [
+                "01.jpg" 
+            ]
+        }, {
+            "title": "Machine Learning",
+            "date": "February 2016",
+            "content": [
+                "01.jpg" 
+            ]
+        }]
+    }
+]
