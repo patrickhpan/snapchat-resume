@@ -24,6 +24,9 @@ class Story extends React.Component {
     render() {
         let title = this.props.title;
         let thumb = resolveStory(title);
+        let thumbStyle = {
+            backgroundImage: `url(${thumb})`
+        };
         let date = this.props.date;
         let content = this.props.content.map(filename => resolveStory(title, filename));
 
@@ -34,7 +37,10 @@ class Story extends React.Component {
             <div className="story-info-container"
                 onClick={openPlayer}
             >
-                <img src={thumb} alt="" className="thumbnail" />
+                <div 
+                    className="thumbnail"
+                    style={thumbStyle}
+                />
                 <div className="story-info">
                     <h3>{title}</h3>
                     <h4>{date}</h4>

@@ -1,7 +1,7 @@
 // Layout
 
 $phone-ratio: 572 / 310;
-$phone-height: 90vh;
+$phone-height: 95vh;
 $phone-top-padding: 14.56% * $phone-ratio;
 $phone-left-padding: 12.5%;
 $phone-right-padding: 12.15%;
@@ -34,6 +34,10 @@ $breakpoint: 480px;
     justify-content: $justify-content;
 }
 
+@mixin recolor($color: black) {
+
+}
+
 @media screen and (max-width: $breakpoint) {
     div#Wrapper {
         position: fixed;
@@ -51,18 +55,6 @@ $breakpoint: 480px;
         }
     }
 }
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-
-// Colors 
-
-$yellow: #fffc00;
-$purple: #9b55a0;
-$black: #000000;
-$white: #ffffff;  
 
 // Fonts and aesthetics
 
@@ -99,6 +91,7 @@ $sans2: 'Museo Sans',
     box-sizing: border-box;
     @include no-select();
     font-family: $sans1;
+    -webkit-overflow-scrolling: touch;
 }
 
 h1,
@@ -120,4 +113,8 @@ input, button {
 
 #Wrapper:not(.expanded) {
     font-size: 1vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

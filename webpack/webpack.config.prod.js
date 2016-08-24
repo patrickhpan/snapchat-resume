@@ -20,7 +20,8 @@ module.exports = {
 		extensions: ['', '.js', '.jsx', '.json']
 	},
 	module: {
-		loaders: loaders
+		loaders: loaders,
+		noParse: /node_modules\/json-schema\/lib\/validate\.js/
 	},
 	plugins: [
 		new CopyWebpackPlugin([
@@ -37,5 +38,11 @@ module.exports = {
 				NODE_ENV: '"production"'
 			}
 		})
-	]
+	],
+	node: {
+		console: true,
+		fs: 'empty',
+		net: 'empty',
+		tls: 'empty'
+	}
 };

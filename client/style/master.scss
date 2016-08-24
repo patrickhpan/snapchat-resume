@@ -1,5 +1,5 @@
-@import './helpers.scss';
 @import './variables.scss';
+@import './helpers.scss';
 
 body {
     margin: 0;
@@ -47,41 +47,42 @@ div#Wrapper {
     }
 
     div#Landing {
-        div#landing-group {
-            @include flex($justify-content: flex-end);
-            flex: 1;
-            
+        @include flex($justify-content: flex-end);
+        flex: 1;
+
+        div#landing-logo-container {
+            @include flex;
+            flex-grow: 1;
+            width: 100%;
+
             img {
                 width: $landing-ghost-width;
             }
-
-            h1 {
-                margin-top: $landing-header-margin-top;
-
-                // text-transform: lowercase;
-                font-size: $landing-header-size;    
-            }
         }
 
+        div#landing-name,
         div#landing-enter {
-            @include flex();
+            @include flex;
+            width: 100%;
+            flex-grow: 0;
 
-            flex: 1;
+            min-height: $landing-button-min-height; 
 
-            button {
-                padding: $landing-button-padding;
+            color: $white;
 
-                border-radius: $landing-button-corners;
-                border: none;
+            text-transform: uppercase; 
+            font-size: $landing-button-size;
+            font-weight: $landing-button-weight;
+            letter-spacing: $landing-button-spacing;
+            cursor: pointer;
+        }       
 
-                background-color: $landing-button-bg;
-                color: $white;
+        div#landing-name {
+            background-color: $magenta;
+        }     
 
-                text-transform: lowercase; 
-                font-size: $landing-button-size;
-
-                cursor: pointer;
-            }
+        div#landing-enter {
+            background-color: $blue;
         }
     }
 
@@ -97,8 +98,17 @@ div#Wrapper {
                 width: 100%;
                 height: $story-header-height;
 
+                padding: $story-header-padding;
+
+                justify-content: space-between;
+
                 background-color: $white;
-                color: $purple;
+                color: $purple;               
+
+                img {
+                    height: 75%;
+                    cursor: pointer;
+                }
 
                 h2 {
                     font-weight: $story-header-weight;
@@ -157,11 +167,14 @@ div#Wrapper {
                     @include flex($flex-direction: row);
                 }
 
-                img.thumbnail {
-                    border-radius: 50%;
+                div.thumbnail {
                     height: $story-thumb-height;
                     width: $story-thumb-height;
                     margin: $story-thumb-margin;
+
+                    border-radius: 50%;
+                    background-size: cover;
+                    background-position: center center;
                 }
 
                 div.story-info {
@@ -217,11 +230,19 @@ div#Player {
     position: absolute;
     @include nosides;
     @include hundop;
-    @include inphone;
+
+    #Wrapper:not(.expanded) & {
+        @media screen and (min-width: $breakpoint + 1px) {
+            @include inphone;
+        }
+    }
     
-    img {
+    img,
+    video,
+    iframe {
         @include hundop;
         @include nosides;
         // background-color: green;
     }
+    
 }

@@ -1,19 +1,29 @@
+// Colors 
+
+$yellow: #fffc00;
+$magenta: #e82754;
+$blue: #3db1e2;
+$purple: #9b55a0;
+$black: #000000;
+$white: #ffffff;  
+
 // Landing page
 
-$landing-ghost-width: 10em;
-$landing-header-size: 2.5em;
+$landing-ghost-width: 7.5em;
+$landing-ghost-padding: 5em;
 $landing-header-margin-top: 1.5em;
 
-$landing-button-padding: 1em;
-$landing-button-bg: rgba(black, 0.8);
-$landing-button-size: 1.5em;
-$landing-button-corners: 0.2em;
+$landing-button-size: 2.1em;
+$landing-button-weight: 700;
+$landing-button-spacing: 0.1em;
+$landing-button-min-height: 3.5em;
 
 // Story List
 
 $story-header-height: 4em;
 $story-header-weight: 400;
 $story-header-size: 2em;
+$story-header-padding: 0.25em 1em;
 
 $story-section-border: 1px solid rgba($black, 0.1);
 $story-section-header-margin: 0.6em;
@@ -26,7 +36,7 @@ $story-thumb-height: 4.5em;
 $story-thumb-margin: ($story-height - $story-thumb-height) / 2;
 $story-info-title-weight: 500;
 $story-info-title-size: 1.6em;
-$story-info-spacing: 0.25px;
+$story-info-spacing: 0.01em;
 $story-info-date-weight: 300;
 $story-info-date-color: #999999;
 

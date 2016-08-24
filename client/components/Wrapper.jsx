@@ -10,17 +10,20 @@ class Wrapper extends React.Component {
             showLanding: true
         }
     }
-    enter() {
+    setLanding(value = false) {
+        console.log(value)
         this.setState({
-            showLanding: false
+            showLanding: value
         })
     }
     render() {
-        let enter = this.enter.bind(this);
+        let setLanding = this.setLanding.bind(this);
 
         let children = this.state.showLanding ?
-            <Landing enter = {enter} /> :
-            <StoryList />;
+            <Landing setLanding={setLanding} /> :
+            <StoryList 
+                setLanding={setLanding}
+            />;
 
         let className = this.props.expanded ? 
             "expanded" : 

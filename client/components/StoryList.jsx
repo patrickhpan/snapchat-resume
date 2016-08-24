@@ -1,4 +1,5 @@
 import React from 'react';
+import Swipeable from 'react-swipeable';
 
 import StoryHeader from './StoryHeader';
 import StorySection from './StorySection';
@@ -18,8 +19,16 @@ class StoryList extends React.Component {
     }
     render() {
         let stories = keyify(this.renderStoryLists(Stories));
-        return <div id="StoryList">
-            <StoryHeader />
+        let showLanding=() => {
+            this.props.setLanding(true)
+        };
+        return <Swipeable
+            onSwipedRight={showLanding} 
+            id="StoryList"
+        >
+            <StoryHeader 
+                showLanding={showLanding}
+            />
             <div id="story-section-container">
                 <StorySection 
                     content={MyStory}
@@ -29,7 +38,7 @@ class StoryList extends React.Component {
                 />
                 {stories}
             </div>
-        </div>
+        </Swipeable>
     }
 }
 

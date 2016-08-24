@@ -4,15 +4,16 @@ import Ghost from '../img/ghost.svg';
 
 class Landing extends React.Component {
     render() {
+        let onClick = () => {
+            this.props.setLanding(false)
+        };
+
         return <div id="Landing">
-            <div id="landing-group">
+            <div id="landing-logo-container">
                 <img src={Ghost} alt=""/>
-                <h1>Patrick Pan</h1>
             </div>
-            <div id="landing-enter">
-                <button
-                    onClick={this.props.enter}
-                >View my Resume</button></div>
+            <div id="landing-name" onClick={onClick}>Patrick Pan</div>
+            <div id="landing-enter" onClick={onClick}>View my Resume</div>
         </div>        
     }
 }

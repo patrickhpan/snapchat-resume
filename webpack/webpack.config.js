@@ -24,7 +24,8 @@ module.exports = {
 		extensions: ['', '.js', '.jsx', '.json']
 	},
 	module: {
-		loaders: loaders
+		loaders: loaders,
+		noParse: /json-schema.+$/
 	},
 	devServer: {
 		contentBase: SETTINGS.OUTDIR,
@@ -47,5 +48,11 @@ module.exports = {
 				to: path.join(SETTINGS.OUTDIR, 'media')
 			}
 		])
-	]
+	],
+	node: {
+		console: true,
+		fs: 'empty',
+		net: 'empty',
+		tls: 'empty'
+	}
 };
