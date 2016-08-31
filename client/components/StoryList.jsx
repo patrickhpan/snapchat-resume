@@ -37,6 +37,10 @@ class StoryList extends React.Component {
                     content={FeaturedStories}
                 />
                 {stories}
+                <div id="story-section-footer" />
+            </div>
+            <div id="story-list-gradient-container">
+                <div id="story-list-gradient" />
             </div>
         </Swipeable>
     }

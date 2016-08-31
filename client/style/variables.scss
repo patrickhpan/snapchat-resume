@@ -33,12 +33,12 @@ $story-section-header-size: 1em;
 
 $story-height: 6em;
 $story-thumb-height: 4.5em;
-$story-thumb-margin: ($story-height - $story-thumb-height) / 2;
+$story-thumb-margin: ($story-height - $story-thumb-height) / 2 ($story-height - $story-thumb-height) / 1.5;
 $story-info-title-weight: 500;
 $story-info-title-size: 1.6em;
 $story-info-spacing: 0.01em;
 $story-info-date-weight: 300;
-$story-info-date-color: #999999;
+$story-info-date-color: #b5b5b5;
 
 $featured-story-section-margin-bottom: 0.5em;
 
@@ -47,3 +47,5 @@ $featured-story-ratio: 1.7;
 $featured-story-width: 9em;
 $featured-story-height: $featured-story-width * $featured-story-ratio;
 $featured-story-radius: 0.2em;
+
+$story-section-footer-height: 6em;

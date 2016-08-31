@@ -182,13 +182,13 @@ div#Wrapper {
                     flex: 1;  
 
                     h3 {
-                        font-family: $sans2;
+                        font-family: $sans1;
                         font-weight: $story-info-title-weight;
                         font-size: $story-info-title-size;
                         letter-spacing: $story-info-spacing;
                     }
                     h4 {
-                        font-family: $sans2;
+                        font-family: $sans1;
                         font-weight: $story-info-date-weight;
                         color: $story-info-date-color;
                     }
@@ -223,10 +223,15 @@ div#Wrapper {
                 }
             }
         }
+
+        div#story-section-footer {
+            height: $story-section-footer-height;
+        } 
     }
 }
 
-div#Player {
+div#Player,
+div#story-list-gradient-container {
     position: absolute;
     @include nosides;
     @include hundop;
@@ -245,4 +250,18 @@ div#Player {
         // background-color: green;
     }
     
+}
+
+div#story-list-gradient-container {
+    display: flex;
+    align-items: flex-end;
+
+    pointer-events: none;
+
+    div#story-list-gradient {
+        width: 100%;
+        height: $story-section-footer-height;
+        
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255, 1));
+    }
 }
