@@ -253,6 +253,7 @@ div#story-list-gradient-container {
 }
 
 div#story-list-gradient-container {
+    z-index: 10;
     display: flex;
     align-items: flex-end;
 
@@ -264,4 +265,8 @@ div#story-list-gradient-container {
         
         background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255, 1));
     }
+}
+
+div#Player {
+    z-index: 20;
 }
