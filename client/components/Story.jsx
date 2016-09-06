@@ -50,6 +50,7 @@ class Story extends React.Component {
             {
                 this.state.playing ?
                 <Player
+                    title={title}
                     content={content}
                     closePlayer={closePlayer}
                 /> :

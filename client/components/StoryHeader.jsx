@@ -2,6 +2,7 @@ import React from 'react';
 
 import pdfIcon from '../img/pdf.svg';
 import emailIcon from '../img/email.svg';
+import links from '../json/links'; 
 
 class StoryHeader extends React.Component {
     render() {
