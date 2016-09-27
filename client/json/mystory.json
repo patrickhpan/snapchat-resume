@@ -3,6 +3,7 @@
     "stories": [{
         "title": "My Story",
         "date": "Just now",
+        "percent": 100,
         "content": [
             "01.jpg", 
             "02.jpg",

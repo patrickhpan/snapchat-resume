@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Player from './Player';
+import PieChart from './PieChart';
 
 import resolveStory from '../js/resolveStory';
 
@@ -28,6 +29,7 @@ class Story extends React.Component {
             backgroundImage: `url(${thumb})`
         };
         let date = this.props.date;
+        let percent = this.props.percent;
         let content = this.props.content.map(filename => resolveStory(title, filename));
 
         let openPlayer = this.openPlayer.bind(this);
@@ -42,8 +44,11 @@ class Story extends React.Component {
                     style={thumbStyle}
                 />
                 <div className="story-info">
-                    <h3>{title}</h3>
-                    <h4>{date}</h4>
+                    <div className="story-title">{title}</div>
+                    <div className="story-date">
+                        <PieChart percent={percent}/>
+                        <span>{date}</span>
+                    </div>
                 </div> 
             </div>
             

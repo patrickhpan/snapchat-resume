@@ -181,16 +181,34 @@ div#Wrapper {
                     @include flex($flex-direction: column, $align-items: flex-start);
                     flex: 1;  
 
-                    h3 {
+                    div.story-title {
                         font-family: $sans1;
                         font-weight: $story-info-title-weight;
                         font-size: $story-info-title-size;
                         letter-spacing: $story-info-spacing;
+                        margin: $story-info-title-margin;
                     }
-                    h4 {
-                        font-family: $sans1;
-                        font-weight: $story-info-date-weight;
-                        color: $story-info-date-color;
+                    div.story-date {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        svg {
+                            height: $story-piechart-size;
+                            width: $story-piechart-size;
+                            margin: $story-piechart-margin;
+
+                            transform: scaleX(-1) rotate(-90deg);
+
+                            circle {
+                                stroke: $story-piechart-color;
+                            }
+                        }
+                        span {
+                            font-family: $sans1;
+                            font-weight: $story-info-date-weight;
+                            color: $story-info-date-color;
+                        }
                     }
                 }
             }

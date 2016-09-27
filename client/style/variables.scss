@@ -31,14 +31,18 @@ $story-section-header-spacing: 0.18em;
 $story-section-header-weight: 600;
 $story-section-header-size: 1em;
 
-$story-height: 6em;
+$story-height: 6.4em;
 $story-thumb-height: 4.5em;
 $story-thumb-margin: ($story-height - $story-thumb-height) / 2 ($story-height - $story-thumb-height) / 1.5;
 $story-info-title-weight: 500;
 $story-info-title-size: 1.6em;
 $story-info-spacing: 0.01em;
+$story-info-title-margin: 0 0 0.15em 0;
 $story-info-date-weight: 300;
 $story-info-date-color: #b5b5b5;
+$story-piechart-size: 1em;
+$story-piechart-color: $story-info-date-color;
+$story-piechart-margin: 0 0.5em 0 0;
 
 $featured-story-section-margin-bottom: 0.5em;
 

@@ -13,6 +13,7 @@ class StorySection extends React.Component {
             return <Story
                 title={story.title}
                 date={story.date}
+                percent={story.percent}
                 content={story.content}
             />
         });

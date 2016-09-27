@@ -4,18 +4,21 @@
         "stories": [{
             "title": "Harvard College",
             "date": "2014 - Present",
+            "percent": 93,
             "content": [
                 "001.jpg"
             ]
         }, {
             "title": "New England Conservatory",
             "date": "2014 - Present",
+            "percent": 93,
             "content": [
                 "001.jpg"
             ]
         }, {
             "title": "Clear Lake High School",
             "date": "2011   - 2014",
+            "percent": 20,
             "content": [
                 "001.jpg"
             ]
@@ -26,30 +29,35 @@
         "stories": [{
             "title": "Gifs.com",
             "date": "2014 - Present",
-            "content": [
-                "001.jpg"
-            ]
-        }, {
-            "title": "Skindeep",
-            "date": "February 2016",
+            "percent": 93,
             "content": [
                 "001.jpg"
             ]
         }, {
             "title": "Microsoft",
             "date": "Summer 2016",
+            "percent": 70,
+            "content": [
+                "001.jpg"
+            ]
+        }, {
+            "title": "Skindeep",
+            "date": "February 2016",
+            "percent": 55,
             "content": [
                 "001.jpg"
             ]
         }, {
             "title": "CoxLab",
             "date": "January 2016 - Present",
+            "percent": 55,
             "content": [
                 "001.jpg"
             ]
         }, {
             "title": "CS50 Teaching Fellow",
             "date": "Fall 2015",
+            "percent": 40,
             "content": [
                 "001.jpg"
             ]
@@ -60,24 +68,28 @@
         "stories": [{
             "title": "Front-End Web Development",
             "date": "Javascript ES6, React, HTML5, SCSS...",
+            "percent": 100,
             "content": [
                 "001.jpg"
             ]
         }, {
             "title": "Back-End Web Development",
             "date": "node.js, php, SQL, webpack, elasticsearch...",
+            "percent": 100,
             "content": [
                 "001.jpg" 
             ]
         }, {
             "title": "Systems",
             "date": "February 2016",
+            "percent": 100,
             "content": [
                 "001.jpg" 
             ]
         }, {
             "title": "Machine Learning",
             "date": "February 2016",
+            "percent": 100,
             "content": [
                 "001.jpg" 
             ]
