@@ -1,5 +1,6 @@
 import React from 'react';
 import Swipeable from 'react-swipeable';
+import DoublePieChart from './DoublePieChart';
 
 class Player extends React.Component {
     constructor() {
@@ -36,6 +37,7 @@ class Player extends React.Component {
             onClick={advance}
             onSwipedDown={closePlayer}
         >
+            <DoublePieChart />
             { renderedContent }
         </Swipeable>
     }

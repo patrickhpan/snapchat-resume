@@ -3,6 +3,7 @@
 
 body {
     margin: 0;
+    overflow: hidden;
     background-color: $yellow;
     font-family: $sans1;
 }
@@ -193,15 +194,15 @@ div#Wrapper {
                         flex-direction: row;
                         align-items: center;
 
-                        svg {
+                        svg.PieChart {
                             height: $story-piechart-size;
                             width: $story-piechart-size;
-                            margin: $story-piechart-margin;
-
-                            transform: scaleX(-1) rotate(-90deg);
+                            margin-right: $story-piechart-margin;
 
                             circle {
-                                stroke: $story-piechart-color;
+                                stroke: $piechart-color;
+                                stroke-width: 50%;
+                                fill: none;
                             }
                         }
                         span {
@@ -265,7 +266,6 @@ div#story-list-gradient-container {
     iframe {
         @include hundop;
         @include nosides;
-        // background-color: green;
     }
     
 }
@@ -287,4 +287,25 @@ div#story-list-gradient-container {
 
 div#Player {
     z-index: 20;
+    box-sizing: border-box;
+
+    svg#DoublePieChart {
+        position: absolute;
+
+        width: $double-piechart-size;
+        height: $double-piechart-size;
+
+        circle.circle {
+            stroke: $piechart-color;
+            fill: none;
+        }
+        circle.ring {
+            stroke: $double-piechart-ring-color;
+            fill: none;
+        }
+        circle.bg {
+            stroke: none;
+            fill: $double-piechart-fill-color;
+        }
+    }
 }

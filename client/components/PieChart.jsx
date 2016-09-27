@@ -7,13 +7,13 @@ class PieChart extends React.Component {
         let circumference = 2 * Math.PI * 25;
 
         let style = {
-            strokeDasharray: `${circumference * percent}% ${circumference}%`,
-            strokeWidth: '50%',
-            fill: 'none'
+            strokeDasharray: `0 ${circumference * (1 - percent)} ${circumference * percent}`,
         }
-        return <svg width="100%" height="100%">
-                <circle r="25%" cx="50%" cy="50%" style={style}/>
-            </svg>
+        return <svg viewBox="0 0 100 100" 
+            className="PieChart"
+        >
+            <circle r="25" cx="50" cy="50" style={style} transform="rotate(270 50 50)"/>
+        </svg>
     }
 }
 

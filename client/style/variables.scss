@@ -41,8 +41,12 @@ $story-info-title-margin: 0 0 0.15em 0;
 $story-info-date-weight: 300;
 $story-info-date-color: #b5b5b5;
 $story-piechart-size: 1em;
-$story-piechart-color: $story-info-date-color;
-$story-piechart-margin: 0 0.5em 0 0;
+$story-piechart-margin: 0.5em;
+
+$piechart-color: $story-info-date-color;
+$double-piechart-ring-color: white;
+$double-piechart-fill-color: rgba(black, 0.5);
+$double-piechart-size: 2.5em;
 
 $featured-story-section-margin-bottom: 0.5em;
 

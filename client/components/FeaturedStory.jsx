@@ -22,7 +22,6 @@ class FeaturedStory extends React.Component {
         });
     }
     renderPlayer(media) {
-        console.log(media)
         if(media.type === 'web') {
             return <WebPlayer 
                 url={media.url}
