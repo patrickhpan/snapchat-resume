@@ -22,8 +22,7 @@ class StoryList extends React.Component {
         let showLanding=() => {
             this.props.setLanding(true)
         };
-        return <Swipeable
-            onSwipedRight={showLanding} 
+        return <div 
             id="StoryList"
         >
             <StoryHeader 
@@ -42,7 +41,7 @@ class StoryList extends React.Component {
             <div id="story-list-gradient-container">
                 <div id="story-list-gradient" />
             </div>
-        </Swipeable>
+        </div>
     }
 }
 
