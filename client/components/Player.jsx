@@ -1,6 +1,7 @@
 import React from 'react';
 import Swipeable from 'react-swipeable';
-import DoublePieChart from './DoublePieChart';
+
+import PlayerInfo from './PlayerInfo'
 
 class Player extends React.Component {
     constructor() {
@@ -30,19 +31,23 @@ class Player extends React.Component {
         let currentContent = content[this.state.index];
         let renderedContent = this.renderMedia(currentContent);
 
+        let title = this.props.title;
         let advance = this.advance.bind(this);
-        let closePlayer = this.props.closePlayer;
+        let closePlayer = this.props.closePlayer.bind(this);
 
         return <Swipeable id="Player"
             onClick={advance}
             onSwipedDown={closePlayer}
         >
-            <DoublePieChart 
+            
+            { renderedContent }
+            <PlayerInfo
+                title={title}
                 advance={advance}
                 step={this.state.index}
-                timings={content.map(x => 5)}
+                content={content}
+                closePlayer={closePlayer}
             />
-            { renderedContent }
         </Swipeable>
     }
 }

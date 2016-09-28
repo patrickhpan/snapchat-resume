@@ -40,7 +40,7 @@ $story-info-spacing: 0.01em;
 $story-info-title-margin: 0 0 0.15em 0;
 $story-info-date-weight: 300;
 $story-info-date-color: #b5b5b5;
-$story-piechart-size: 1em;
+$story-piechart-size: 0.8em;
 $story-piechart-margin: 0.5em;
 
 $piechart-color: $story-info-date-color;
@@ -57,3 +57,15 @@ $featured-story-height: $featured-story-width * $featured-story-ratio;
 $featured-story-radius: 0.2em;
 
 $story-section-footer-height: 6em;
+
+$player-info-padding-border: 1.6em solid transparent;
+$player-info-title-weight: 500;
+$player-info-title-size: 1.6em;
+$player-info-text-margin: 0.25em;
+$player-info-text-shadow: 0 0 10px black;
+$player-info-name-weight: 400;
+$player-info-name-size: 1.1em;
+$player-info-spacing: $story-info-spacing;
+$close-button-size: 3em;
+$close-button-stroke-width: 0.2em;
+$close-button-shadow-filter: drop-shadow( 0 0 1em black );

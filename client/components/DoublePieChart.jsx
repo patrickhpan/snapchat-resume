@@ -22,18 +22,15 @@ class DoublePieChart extends React.Component {
     }
 
     componentDidMount() {
-        console.log("mount")
         this.tween();
     }
 
     componentDidUpdate() {
-        console.log("update")
         this.tween();
     }
 
     render() {
-        console.log("render")
-        let timings = this.props.timings || [3, 3, 3];
+        let timings = this.props.timings;
         let totalTime = timings.reduce((a, b) => a + b);
         let step = this.props.step;
         let progressedTime = step === 0 ? 0 : timings.slice(0, step).reduce((a,b) => a+b);

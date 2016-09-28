@@ -6,12 +6,17 @@ import links from '../json/links';
 
 class StoryHeader extends React.Component {
     render() {
+        let generateOnClick = (link) => (() => window.open(link));
         return <div id="StoryHeader">
-            <img src={pdfIcon} alt=""/>
+            <img src={pdfIcon} alt=""
+                onClick={generateOnClick(links.pdf)}
+            />
             <h2
                 onClick={this.props.showLanding}
             >Patrick Pan</h2>
-            <img src={emailIcon} alt=""/>
+            <img src={emailIcon} alt=""
+                onClick={generateOnClick(links.email)}
+            />
         </div>
     }
 }

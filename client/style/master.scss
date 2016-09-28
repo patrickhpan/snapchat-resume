@@ -288,24 +288,74 @@ div#story-list-gradient-container {
 div#Player {
     z-index: 20;
     box-sizing: border-box;
+    color: $white;
 
-    svg#DoublePieChart {
+    div#PlayerInfo {
         position: absolute;
+        @include nosides;
+        padding: inherit;
 
-        width: $double-piechart-size;
-        height: $double-piechart-size;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
 
-        circle.circle {
-            stroke: $piechart-color;
-            fill: none;
+        border: $player-info-padding-border;
+
+        div#player-info-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            line-height: 1;
+            letter-spacing: $player-info-spacing;
+
+            text-shadow: $player-info-text-shadow;
+
+            h3 {
+                font-weight: $player-info-title-weight;
+                font-size: $player-info-title-size;
+                margin-bottom: $player-info-text-margin;
+            }
+            h4 {
+                font-weight: $player-info-name-weight;
+                font-size: $player-info-name-size;
+            }
         }
-        circle.ring {
-            stroke: $double-piechart-ring-color;
-            fill: none;
+
+        svg#DoublePieChart {
+            width: $double-piechart-size;
+            height: $double-piechart-size;
+
+            circle.circle {
+                stroke: $piechart-color;
+                fill: none;
+            }
+            circle.ring {
+                stroke: $double-piechart-ring-color;
+                fill: none;
+            }
+            circle.bg {
+                stroke: $double-piechart-bg-color;
+                fill: none;
+            }
         }
-        circle.bg {
-            stroke: $double-piechart-bg-color;
-            fill: none;
+
+        div#CloseButton {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 9999999999;
+
+            svg {
+                align-self: flex-end;
+                width: $close-button-size;
+                height: $close-button-size;
+
+                stroke-width: $close-button-stroke-width;
+                stroke: white;
+                filter: $close-button-shadow-filter;
+            }
         }
     }
 }
