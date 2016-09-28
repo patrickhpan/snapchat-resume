@@ -11,18 +11,31 @@ class DoublePieChart extends React.Component {
         super();
     }
 
-    componentDidMount(callback) {
+    tween() {
         let { startStyle, endStyle, outerStartStyle, outerEndStyle, animLength } = this.animOptions;  
         endStyle.ease = Linear.easeNone;
         outerEndStyle.ease = Linear.easeNone;
+        outerEndStyle.onComplete = this.props.advance;
 
         TweenMax.fromTo(this.ring, animLength, outerStartStyle, outerEndStyle);
         TweenMax.fromTo(this.circle, animLength, startStyle, endStyle);
     }
+
+    componentDidMount() {
+        console.log("mount")
+        this.tween();
+    }
+
+    componentDidUpdate() {
+        console.log("update")
+        this.tween();
+    }
+
     render() {
-        let timings = this.props.timings || [10, 10, 10];
+        console.log("render")
+        let timings = this.props.timings || [3, 3, 3];
         let totalTime = timings.reduce((a, b) => a + b);
-        let step = this.props.step || 0;
+        let step = this.props.step;
         let progressedTime = step === 0 ? 0 : timings.slice(0, step).reduce((a,b) => a+b);
         
         let startPercent = 1 - (progressedTime / totalTime);
@@ -38,11 +51,15 @@ class DoublePieChart extends React.Component {
             "stroke-dasharray": `0 ${(innerCircumference * (1 - endPercent)).toFixed(2)} ${innerCircumference}`
         }
 
+        if(step === timings.length - 1) {
+            startStyle = endStyle;
+        }
+
         let outerStartStyle = {
-            "stroke-dasharray": `0 ${outerCircumference}`
+            "stroke-dasharray": `0 0 ${outerCircumference}`
         }
         let outerEndStyle = {
-            "stroke-dasharray": `${outerCircumference} 0`
+            "stroke-dasharray": `0 ${outerCircumference} ${outerCircumference}`            
         }
 
         let innerStyle = Object.assign({
@@ -50,7 +67,11 @@ class DoublePieChart extends React.Component {
         }, this.startStyle);
 
         let outerStyle = {
-            strokeWidth: `${(settings.outerRadius - 2 * settings.innerRadius) * 2 - 7}`
+            strokeWidth: `${(settings.outerRadius - 2 * settings.innerRadius) * 2 - 8.5}`
+        }
+
+        let bgStyle = {
+            strokeWidth: `${(settings.outerRadius - 2 * settings.innerRadius) * 2}`
         }
 
         this.animOptions = {
@@ -66,7 +87,7 @@ class DoublePieChart extends React.Component {
         >
                 <circle     
                     className="bg"
-                    r="50" cx="50" cy="50" style={outerStyle}
+                    r={settings.outerRadius} cx="50" cy="50" style={bgStyle}
                     transform="rotate(270, 50, 50)"
                 />
                 <circle 

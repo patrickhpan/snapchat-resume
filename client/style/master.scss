@@ -304,8 +304,8 @@ div#Player {
             fill: none;
         }
         circle.bg {
-            stroke: none;
-            fill: $double-piechart-fill-color;
+            stroke: $double-piechart-bg-color;
+            fill: none;
         }
     }
 }

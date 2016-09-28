@@ -10,14 +10,14 @@ class Player extends React.Component {
         }
     }
     advance() {
-        this.setState({
-            index: this.state.index + 1
-        }, () => {
-            let length = this.props.content.length;
-            if(length === this.state.index) {
-                this.props.closePlayer();
-            }
-        })
+        let length = this.props.content.length;
+        if(length === this.state.index) {
+            this.props.closePlayer();
+        } else {
+            this.setState({
+                index: this.state.index + 1
+            })
+        }
     }
     renderMedia(filename) {
         if(/(png$|jpe?g$)/ig.test(filename)) {
@@ -37,7 +37,11 @@ class Player extends React.Component {
             onClick={advance}
             onSwipedDown={closePlayer}
         >
-            <DoublePieChart />
+            <DoublePieChart 
+                advance={advance}
+                step={this.state.index}
+                timings={content.map(x => 5)}
+            />
             { renderedContent }
         </Swipeable>
     }
