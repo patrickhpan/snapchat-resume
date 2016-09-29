@@ -99,7 +99,7 @@ div#Wrapper {
         div#story-header-container {
             width: 100%;
             position: relative;
-            
+
             div#StoryHeader {
                 @include flex($flex-direction: row);
 
@@ -108,6 +108,7 @@ div#Wrapper {
                 width: 100%;
                 height: $story-header-height;
                 position: absolute;
+                z-index: 10;
 
                 padding: $story-header-padding;
                 margin-left: 0;
