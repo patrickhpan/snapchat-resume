@@ -48,10 +48,6 @@ class DoublePieChart extends React.Component {
             "stroke-dasharray": `0 ${(innerCircumference * (1 - endPercent)).toFixed(2)} ${innerCircumference}`
         }
 
-        if(step === timings.length - 1) {
-            startStyle = endStyle;
-        }
-
         let outerStartStyle = {
             "stroke-dasharray": `0 0 ${outerCircumference}`
         }
@@ -79,6 +75,16 @@ class DoublePieChart extends React.Component {
             animLength: timings[step]
         }
 
+        let inner = (step === timings.length - 1) ?
+            null : 
+            <circle 
+                className="circle"
+                ref={(c) => this.circle = c}
+                r={settings.innerRadius} cx="50" cy="50" style={innerStyle}
+                transform="rotate(270, 50, 50)"
+            />
+
+
         return <svg viewBox="0 0 100 100"
             id="DoublePieChart"
         >
@@ -93,12 +99,7 @@ class DoublePieChart extends React.Component {
                     r={settings.outerRadius} cx="50" cy="50" style={outerStyle}
                     transform="rotate(270, 50, 50)"
                 />
-                <circle 
-                    className="circle"
-                    ref={(c) => this.circle = c}
-                    r={settings.innerRadius} cx="50" cy="50" style={innerStyle}
-                    transform="rotate(270, 50, 50)"
-                />
+                {inner}
         </svg>
     }
 }

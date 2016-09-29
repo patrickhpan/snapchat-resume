@@ -50,6 +50,10 @@ div#Wrapper {
     div#Landing {
         @include flex($justify-content: flex-end);
         flex: 1;
+        z-index: 30;
+        background-color: $yellow;
+        background-clip: content-box, padding-box;
+
 
         div#landing-logo-container {
             @include flex;
@@ -92,14 +96,22 @@ div#Wrapper {
 
         background-color: $white;
         background-clip: content-box;
-
-         div#StoryHeader {
+        div#story-header-container {
+            width: 100%;
+            position: relative;
+            
+            div#StoryHeader {
                 @include flex($flex-direction: row);
+
+                box-sizing: border-box;
 
                 width: 100%;
                 height: $story-header-height;
+                position: absolute;
 
                 padding: $story-header-padding;
+                margin-left: 0;
+                margin-right: 0;
 
                 justify-content: space-between;
 
@@ -116,11 +128,14 @@ div#Wrapper {
                     font-size: $story-header-size;
                 }
             }
+        }
+         
 
         div#story-section-container {
             @include flex($justify-content: flex-start);
             width: 100%;
             flex: 1;
+            padding-top: $story-header-height;
             overflow-x: hidden;
             overflow-y: scroll;
             flex-wrap: nowrap;
@@ -271,6 +286,7 @@ div#story-list-gradient-container {
 }
 
 div#story-list-gradient-container {
+    display:none!important; //temporary
     z-index: 10;
     display: flex;
     align-items: flex-end;

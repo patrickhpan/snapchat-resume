@@ -18,12 +18,9 @@ class Wrapper extends React.Component {
     render() {
         let setLanding = this.setLanding.bind(this);
 
-        let children = this.state.showLanding ?
+        let landing = this.state.showLanding ?
             <Landing setLanding={setLanding} /> :
-            <StoryList 
-                setLanding={setLanding}
-            />;
-
+            null;
         let className = this.props.expanded ? 
             "expanded" : 
             "";
@@ -32,7 +29,14 @@ class Wrapper extends React.Component {
             id="Wrapper" 
             className={className}
         >
-            {children}
+            {landing}
+            
+            <div id="story-list-gradient-container">
+                <div id="story-list-gradient" />
+            </div>
+            <StoryList 
+                setLanding={setLanding}
+            />
         </div>
     }
 }

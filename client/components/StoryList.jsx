@@ -24,10 +24,12 @@ class StoryList extends React.Component {
         };
         return <div 
             id="StoryList"
-        >
-            <StoryHeader 
-                showLanding={showLanding}
-            />
+        >   
+            <div id="story-header-container">
+                <StoryHeader 
+                    showLanding={showLanding}
+                />
+            </div>
             <div id="story-section-container">
                 <StorySection 
                     content={MyStory}
@@ -38,9 +40,7 @@ class StoryList extends React.Component {
                 {stories}
                 <div id="story-section-footer" />
             </div>
-            <div id="story-list-gradient-container">
-                <div id="story-list-gradient" />
-            </div>
+            
         </div>
     }
 }
