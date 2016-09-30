@@ -18,6 +18,7 @@ class App extends React.Component {
         let toggleExpanded = this.toggleExpanded.bind(this)
         return <div>
             <div 
+                style={{"display": "none"}}
                 onClick={toggleExpanded}
             >Toggle Mobile View</div>
             <Wrapper 

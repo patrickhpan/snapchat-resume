@@ -52,14 +52,17 @@
             "date": "Summer 2016",
             "percent": 70,
             "content": [
-                "001.jpg"
+                "001.jpg",
+                "002.jpg"
             ]
         }, {
             "title": "Skindeep",
             "date": "February 2016",
             "percent": 55,
             "content": [
-                "001.jpg"
+                "001.jpg",
+                "002.jpg",
+                "003.jpg"
             ]
         }, {
             "title": "CoxLab",
