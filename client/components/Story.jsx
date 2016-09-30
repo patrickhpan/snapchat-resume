@@ -41,7 +41,10 @@ class Story extends React.Component {
         if(isMobile()) {
             // Terrible hack to fix Mobile Safari not respecting z-index.
             let opacity = this.state.playing ? 0 : 1;
-            document.getElementById("story-header-container").style.opacity = opacity;
+            let el = document.getElementById("story-header-container")
+            if(el) {
+                el.style.opacity = opacity;
+            }
         }
 
         return <div className="Story">
