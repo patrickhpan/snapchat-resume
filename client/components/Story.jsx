@@ -5,6 +5,8 @@ import PieChart from './PieChart';
 
 import resolveStory from '../js/resolveStory';
 
+import isMobile from '../js/isMobile';
+
 class Story extends React.Component {
     constructor() {
         super();
@@ -35,6 +37,12 @@ class Story extends React.Component {
 
         let openPlayer = this.openPlayer.bind(this);
         let closePlayer = this.closePlayer.bind(this);
+
+        if(isMobile()) {
+            // Terrible hack to fix Mobile Safari not respecting z-index.
+            let opacity = this.state.playing ? 0 : 1;
+            document.getElementById("story-header-container").style.opacity = opacity;
+        }
 
         return <div className="Story">
             <div className="story-info-container"
