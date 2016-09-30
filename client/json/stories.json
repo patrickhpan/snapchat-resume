@@ -6,14 +6,26 @@
             "date": "2014 - Present",
             "percent": 93,
             "content": [
-                "001.jpg"
+                "001.mp4",
+                "003.mp4",
+                "004.jpg"
+            ],
+            "lengths": [
+                9.46,
+                9.46,
+                10
             ]
         }, {
             "title": "New England Conservatory",
             "date": "2014 - Present",
             "percent": 93,
             "content": [
-                "001.jpg"
+                "001.jpg",
+                "003.mp4"
+            ],
+            "timings": [
+                10, 
+                11
             ]
         }, {
             "title": "Clear Lake High School",
@@ -55,7 +67,7 @@
                 "001.jpg"
             ]
         }, {
-            "title": "CS50 Teaching Fellow",
+            "title": "CS50 Teaching Fellow", 
             "date": "Fall 2015",
             "percent": 40,
             "content": [

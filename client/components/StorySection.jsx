@@ -15,6 +15,7 @@ class StorySection extends React.Component {
                 date={story.date}
                 percent={story.percent}
                 content={story.content}
+                timings={story.timings}
             />
         });
     }

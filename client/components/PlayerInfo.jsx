@@ -16,6 +16,7 @@ class PlayerInfo extends React.Component {
         let content = this.props.content;
         let advance = this.props.advance;
         let step = this.props.step;
+        let timings = this.props.timings || content.map(x => 10);
 
         let closePlayer = this.props.closePlayer;
 
@@ -27,7 +28,7 @@ class PlayerInfo extends React.Component {
             <DoublePieChart 
                 advance={advance}
                 step={step}
-                timings={content.map(x => 5)}
+                timings={timings}
             />
             <CloseButton 
                 onClick={closePlayer}

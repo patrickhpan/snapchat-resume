@@ -31,6 +31,7 @@ class Story extends React.Component {
         let date = this.props.date;
         let percent = this.props.percent;
         let content = this.props.content.map(filename => resolveStory(title, filename));
+        let timings = this.props.timings;
 
         let openPlayer = this.openPlayer.bind(this);
         let closePlayer = this.closePlayer.bind(this);
@@ -58,6 +59,7 @@ class Story extends React.Component {
                     title={title}
                     content={content}
                     closePlayer={closePlayer}
+                    timings={timings}
                 /> :
                 null
             }

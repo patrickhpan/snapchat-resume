@@ -282,6 +282,7 @@ div#story-list-gradient-container {
     iframe {
         @include hundop;
         @include nosides;
+        background-color: $phoneblack;
     }
     
 }

@@ -24,6 +24,9 @@ class Player extends React.Component {
         if(/(png$|jpe?g$)/ig.test(filename)) {
             return <img src={filename} />
         } 
+        if(/(mp4$)/ig.test(filename)) {
+            return <video src={filename} autoPlay/>
+        }
         return null;
     }
     render() {
@@ -32,11 +35,12 @@ class Player extends React.Component {
         let renderedContent = this.renderMedia(currentContent);
 
         let title = this.props.title;
+        let timings = this.props.timings;
         let advance = this.advance.bind(this);
         let closePlayer = this.props.closePlayer.bind(this);
 
         return <Swipeable id="Player"
-            onClick={advance}
+            onClick={advance} 
             onSwipedDown={closePlayer}
         >
             
@@ -46,6 +50,7 @@ class Player extends React.Component {
                 advance={advance}
                 step={this.state.index}
                 content={content}
+                timings={timings}
                 closePlayer={closePlayer}
             />
         </Swipeable>
