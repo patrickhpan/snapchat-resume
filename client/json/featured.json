@@ -7,45 +7,24 @@
         }
     },
     {
-        "title": "Business Insider",
+        "title": "The Making of this Site",
         "media": {
             "type": "web",
-            "url": "http://www.businessinsider.com/patrick-pan-harvard-freshman-dropout-2015-2"
+            "url": "http://github.com/patrickhpan/snapchat-resume"
         }
     },
     {
-        "title": "Business Insider",
+        "title": "My Photography",
         "media": {
             "type": "web",
-            "url": "http://www.businessinsider.com/patrick-pan-harvard-freshman-dropout-2015-2"
+            "url": "http://instagram.com/_patrickpan_"
         }
     },
-    {
-        "title": "Business Insider",
+     {
+        "title": "Personal Website",
         "media": {
             "type": "web",
-            "url": "http://www.businessinsider.com/patrick-pan-harvard-freshman-dropout-2015-2"
-        }
-    },
-    {
-        "title": "Business Insider",
-        "media": {
-            "type": "web",
-            "url": "http://www.businessinsider.com/patrick-pan-harvard-freshman-dropout-2015-2"
-        }
-    },
-    {
-        "title": "Business Insider",
-        "media": {
-            "type": "web",
-            "url": "http://www.businessinsider.com/patrick-pan-harvard-freshman-dropout-2015-2"
-        }
-    },
-    {
-        "title": "Business Insider",
-        "media": {
-            "type": "web",
-            "url": "http://www.businessinsider.com/patrick-pan-harvard-freshman-dropout-2015-2"
+            "url": "http://patrickpan.com"
         }
     }
 ]

@@ -61,7 +61,12 @@ div#Wrapper {
             width: 100%;
 
             img {
-                width: $landing-ghost-width;
+                &:not(.larger) {
+                    width: $landing-ghost-width;
+                }
+                &.larger {
+                    width: $landing-ghost-width * $landing-ghost-larger-scale;
+                }
             }
         }
 
@@ -237,7 +242,8 @@ div#Wrapper {
             margin-bottom: $featured-story-section-margin-bottom;
             
             div.featured-story-section-container {
-                @include flex($flex-direction: row, $justify-content: flex-start);
+                @include flex($flex-direction: row);
+                width: 100%;
 
                 div.FeaturedStory {
                     width: $featured-story-width;

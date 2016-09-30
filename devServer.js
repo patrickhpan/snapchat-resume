@@ -8,10 +8,6 @@ var app = express();
 app.use(body_parser.urlencoded({ extended: true }));
 app.use(body_parser.json())
 
-var router = require('./server/router');
-
-app.use(router);
-
 var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');

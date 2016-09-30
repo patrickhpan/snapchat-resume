@@ -7,7 +7,7 @@ class Wrapper extends React.Component {
     constructor() {
         super();
         this.state = {
-            showLanding: true // CHANGE
+            showLanding: true 
         }
     }
     setLanding(value = false) {

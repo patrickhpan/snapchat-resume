@@ -72,18 +72,18 @@
 }, {
     "title": "Skills",
     "stories": [{
-        "title": "Front-End Web Development",
-        "date": "Javascript ES6, React, HTML5, SCSS...",
+        "title": "Web Development",
+        "date": "Javascript ES6, React, HTML5, SCSS, node, SQL, elasticsearch...",
         "percent": 100,
         "content": [
-            "001.jpg"
-        ]
-    }, {
-        "title": "Back-End Web Development",
-        "date": "node.js, php, SQL, webpack, elasticsearch...",
-        "percent": 100,
-        "content": [
-            "001.jpg"
+            "001.jpg",
+            "002.jpg",
+            "003.mp4"
+        ],
+        "timings": [
+            10, 
+            10,
+            9.9
         ]
     }, {
         "title": "Systems",
@@ -97,7 +97,12 @@
         "date": "February 2016",
         "percent": 100,
         "content": [
-            "001.jpg"
+            "001.mp4",
+            "002.jpg"
+        ],
+        "timings": [
+            7.8,
+            10
         ]
     }]
 }]
