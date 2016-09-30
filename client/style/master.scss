@@ -272,6 +272,8 @@ div#story-list-gradient-container {
     @include nosides;
     @include hundop;
 
+    background-color: $phoneblack;
+
     #Wrapper:not(.expanded) & {
         @media screen and (min-width: $breakpoint + 1px) {
             @include inphone;
@@ -279,11 +281,11 @@ div#story-list-gradient-container {
     }
     
     img,
-    video,
-    iframe {
+    video {
         @include hundop;
         @include nosides;
-        background-color: $phoneblack;
+
+        height: initial!important;
     }
     
 }
