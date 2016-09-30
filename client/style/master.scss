@@ -272,8 +272,6 @@ div#story-list-gradient-container {
     @include nosides;
     @include hundop;
 
-    background-color: $phoneblack;
-
     #Wrapper:not(.expanded) & {
         @media screen and (min-width: $breakpoint + 1px) {
             @include inphone;
@@ -286,6 +284,8 @@ div#story-list-gradient-container {
         @include nosides;
 
         height: initial!important;
+        min-height: 100%;
+        background-color: $phoneblack;
     }
     
 }
