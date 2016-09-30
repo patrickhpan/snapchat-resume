@@ -61,12 +61,7 @@ div#Wrapper {
             width: 100%;
 
             img {
-                &:not(.larger) {
-                    width: $landing-ghost-width;
-                }
-                &.larger {
-                    width: $landing-ghost-width * $landing-ghost-larger-scale;
-                }
+                width: $landing-ghost-width;
             }
         }
 
